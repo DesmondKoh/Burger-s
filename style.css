@@ -115,3 +115,29 @@ hr{
     margin: 150px 0px 150px 0px;
     color: white;
 }
+
+.reward .heading{
+    text-align: right;
+}
+
+.reward img{
+    width: 430px;
+}
+
+.deliver #description{
+    margin-top: -30px;
+}
+
+.deliver img{
+    width: 150px;
+    margin-left: -20px;
+}
+
+.deliver button{
+    margin-top: 15px;
+    padding: 5px 50px 5px 50px
+}
+
+footer{
+    margin-top: 150px;
+}
