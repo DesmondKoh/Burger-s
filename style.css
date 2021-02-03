@@ -1,0 +1,117 @@
+body{
+    background-color: black;
+}
+
+header{
+    background-image: url(images/background.png) ;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover; 
+}
+
+header .navbar{
+    margin-top: 20px;
+}
+
+header a{
+    font-family: Roboto;
+    color: whitesmoke;
+    font-size: 23px;
+}
+
+header a:hover{
+    color: #FFBB34;
+}
+
+.nav-link{
+    margin-left: 30px;
+}
+
+.navbar-brand{
+    font-size: 40px;
+    font-family: Algerian;
+    color: #FFBB34;
+}
+
+.navbar-nav{
+    margin-left: auto;
+}
+
+.active{
+    text-decoration: underline;
+    color: #FFBB34;
+}
+
+header h1{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    padding-top: 40vmin;
+    font-size: 100px;
+    text-align: center;
+    color: whitesmoke;
+    letter-spacing: 5px;
+}
+
+header h2{
+    font-family: Algerian;
+    padding-bottom: 40vmin;
+    font-size: 40px;
+    color: #FFBB34;
+    text-align: center;
+}
+
+#heading{
+    font-family: Forte;
+    color: #FFBB34;
+    font-size: 50px;
+    margin-bottom: 30px;
+}
+
+#title-text{
+    margin-top: -50px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 130px;
+    color:whitesmoke;
+}
+
+#title-text-2{
+    margin-top: -60px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 190px;
+    color:whitesmoke;
+}
+
+.feature img{
+    width: 510px;
+    margin-top: -95px;
+}
+
+.feature .col-md-3{
+    text-align: right;
+}
+
+.feature button{
+    margin-top: 20px;
+    padding: 5px 50px 5px 50px;
+    color: black;
+}
+
+#price{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 100px;
+    color: #FFBB34;
+    margin-top: 350px;
+    margin-bottom: 20px;
+}
+
+#description{
+    font-family: Roboto;
+    color: rgb(168, 168, 168);
+    font-size: 20px; 
+    margin-top: -20px;
+}
+
+
+hr{
+    margin: 150px 0px 150px 0px;
+    color: white;
+}
