@@ -2,7 +2,7 @@ body{
     background-color: black;
 }
 
-header{
+.index-header{
     background-image: url(images/background.png) ;
     background-repeat: no-repeat;
     background-position: center;
@@ -69,20 +69,20 @@ header h2{
 #title-text{
     margin-top: -50px;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-size: 130px;
+    font-size: 110px;
     color:whitesmoke;
 }
 
 #title-text-2{
     margin-top: -60px;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-size: 190px;
+    font-size: 170px;
     color:whitesmoke;
 }
 
 .feature img{
-    width: 510px;
-    margin-top: -95px;
+    width: 480px;
+    margin-top: -80px;
 }
 
 .feature .col-md-3{
@@ -99,7 +99,7 @@ header h2{
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-size: 100px;
     color: #FFBB34;
-    margin-top: 350px;
+    margin-top: 320px;
     margin-bottom: 20px;
 }
 
@@ -111,7 +111,7 @@ header h2{
 }
 
 
-hr{
+.index-body hr{
     margin: 150px 0px 150px 0px;
     color: white;
 }
@@ -121,7 +121,7 @@ hr{
 }
 
 .reward img{
-    width: 430px;
+    width: 380px;
 }
 
 .deliver #description{
@@ -129,7 +129,7 @@ hr{
 }
 
 .deliver img{
-    width: 150px;
+    width: 125px;
     margin-left: -20px;
 }
 
@@ -140,4 +140,89 @@ hr{
 
 footer{
     margin-top: 150px;
+}
+
+
+#menu-title{
+    padding-top: 170px;
+    text-align: center;
+    color: white;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+#menu-text{
+    text-align: center;
+    color: white;
+    font-family: Roboto;
+    margin-bottom: 20px;
+}
+
+
+.item{
+    border: 1px solid rgb(126, 126, 126);
+    border-radius: 20px;
+    color: white;
+    font-family: Roboto;
+    padding: 15px;
+    margin-top: 10px;
+}
+
+.item button:hover{
+    opacity: 60%;
+}
+
+.item img{
+    width: 180px;
+    border-radius: 5%;
+}
+
+.item button{
+    padding: 7px 40px 7px 40px;
+    margin-top: 20px;
+}
+
+.right-align{
+    text-align: right;
+}
+
+#item-name{
+    font-weight: bold;
+}
+
+#item-description{
+    font-weight: lighter;
+    color: lightgray;
+}
+
+#item-price{
+    text-align: right;
+}
+
+.order-body hr{
+    height: 3px;
+    margin: 50px 0px 50px 0px;
+    color: white;
+}
+
+
+@media screen and (max-width:414px)
+{
+    .item img{
+        width: 80px;
+    }
+
+    #item-name{
+        padding-left: 15px;
+        font-size: 12px;
+    }
+
+    #item-description{
+        padding-left: 15px;
+        font-size: 8px;
+    }
+
+    #item-price{
+        font-size: 18px;
+    }
+
 }
