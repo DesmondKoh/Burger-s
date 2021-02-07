@@ -221,6 +221,58 @@ footer{
 }
 
 
+#addToCart{
+    text-align: center;
+    color: black;
+}
+
+.success{
+    background-color: rgb(5, 226, 5);
+}
+
+.cart-body{
+    margin-top: 170px;
+    color: white;
+ }
+.cart-cover{
+    background-color: whitesmoke;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    padding: 5px 0px 5px 20px;
+    border-radius: 10px;
+    margin-bottom: 25px;
+    color: black; 
+}
+
+.cart-info img{
+    width: 100px;
+    border-radius: 5px;   
+}
+
+.cart-info h5{
+    font-weight: lighter;
+}
+
+.item-remove{
+    color: white; 
+}
+
+#address{
+    width: 300px;
+    height: 70px;
+    border-color: gray;
+    margin-bottom: 30px;
+}
+.summary-cover{
+    background-color: whitesmoke;
+    padding: 15px;
+    color: black;
+}
+
+.summary-cover h3{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+
 @media screen and (max-width:414px)
 {
     header h1{
