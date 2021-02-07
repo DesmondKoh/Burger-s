@@ -1,7 +1,10 @@
 let APIKEY = "601acf656adfba69db8b6d25";
 
-$(document).ready(function () {
-    loadMenu(APIKEY)
+$(document).ready(function () { 
+  loadMenu(APIKEY) 
+  setTimeout(function(){
+     $(".loader").fadeOut("slow"); 
+    }, 5500);  
 })
 
 function loadMenu(APIKEY){
@@ -26,11 +29,11 @@ function loadMenu(APIKEY){
                                         <div class="col-md-2 col-2">
                                         <img src="https://burgers-e911.restdb.io/media/`+ response[j].Image + `?key=` + APIKEY + `">
                                         </div>
-                                        <div class="col-md-6 col-6">
+                                        <div class="col-md-6 col-7">
                                             <h3 id="item-name">`+ response[j].Name + `</h3>
                                             <h5 id="item-description">`+ response[j].Description +`</h5>
                                         </div>
-                                        <div class="col-md-4 col-2 right-align">
+                                        <div class="col-md-4 col-3 right-align">
                                             <h3 id="item-price">$`+ response[j].Price +`</h3>
                                             <button type="button" class="btn btn-warning"  id="` + response[j].Id+ `">Add to cart</button>
                                         </div>
@@ -39,8 +42,8 @@ function loadMenu(APIKEY){
       }
     });
   }
+ 
 }
-
 
 $(".menu-mains").on("click", "button", function(){  
   console.log(this.id); 
