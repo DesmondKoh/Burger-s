@@ -1,19 +1,17 @@
 let APIKEY = "601acf656adfba69db8b6d25";
 
 $(document).ready(function () { 
-  loadMenu(APIKEY) 
+  loadMenu() 
   setTimeout(function(){
      $(".loader").fadeOut("slow"); 
-    }, 5500);  
+    }, 1500);  
 })
 
-function loadMenu(APIKEY){
-  let menu = ["menu-mains", "menu-drinks", "menu-sides"];
-  for (let i = 0; i < 3; i++){ 
+function loadMenu(){
     var setting = {
       "async": true,
       "crossDomain": true,
-      "url": "https://burgers-e911.restdb.io/rest/" + menu[i],
+      "url": "https://burgers-e911.restdb.io/rest/menu",
       "method": "GET",
       "headers": {
         "content-type": "application/json",
@@ -24,7 +22,20 @@ function loadMenu(APIKEY){
 
     $.ajax(setting).done(function (response) {       
       for (let j = 0; j < response.length; j++) {
-        $("." + menu[i]).append(`<div class="item">
+        let char = Array.from(response[j].Id);
+        let menu;
+
+        if(char[0] == "M"){
+          menu = "menu-mains";
+        }
+        else if(char[0] == "S"){
+          menu = "menu-sides";
+        }
+        else if(char[0] == "D"){
+          menu = "menu-drinks";
+        }
+
+        $("." + menu).append(`<div class="item">
                                     <div class="row">
                                         <div class="col-md-2 col-2">
                                         <img src="https://burgers-e911.restdb.io/media/`+ response[j].Image + `?key=` + APIKEY + `">
@@ -41,18 +52,46 @@ function loadMenu(APIKEY){
                                 </div>`)
       }
     });
+  
+}
+
+function addItemToCart(id){
+  $("#addToCart").modal("show");
+
+  setTimeout(function(){
+    $("#addToCart").modal("hide"); 
+   }, 1000);  
+
+  let jsondata = {
+    "ItemId": id
+  };
+
+  var settings = {
+    "async": true,
+    "crossDomain": true,
+    "url": "https://burgers-e911.restdb.io/rest/cart",
+    "method": "POST",
+    "headers": {
+      "content-type": "application/json",
+      "x-apikey": APIKEY,
+      "cache-control": "no-cache"
+    },
+    "processData": false,
+    "data": JSON.stringify(jsondata)
   }
- 
+
+  $.ajax(settings).done(function (response) {
+  });
 }
 
 $(".menu-mains").on("click", "button", function(){  
-  console.log(this.id); 
+  addItemToCart(this.id);
 });
 
 $(".menu-sides").on("click", "button", function(){  
-  console.log(this.id); 
+  addItemToCart(this.id);
 });
 
 $(".menu-drinks").on("click", "button", function(){  
-  console.log(this.id); 
+  addItemToCart(this.id);
 });
