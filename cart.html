@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Cart - Burger's</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+  <link href="style.css" rel="stylesheet" type="text/css" />
+
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script> 
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+</head>
+<header> 
+  <div class="container fixed-top">
+    <nav class="navbar navbar-expand-lg">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Burger's</a>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>    
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="order.html">Order</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="reward.html">Reward</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>  
+          </ul>
+        </div>    
+      </div>
+    </nav>
+  </div>   
+</header>
+<body class="cart-body">
+
+    <div class="loader">
+        <lottie-player src="https://assets7.lottiefiles.com/packages/lf20_6saApy.json"  background="transparent"  speed="1"  style="width: 280px; height: 280px;"  loop  autoplay></lottie-player>   
+        <h3>Loading cart... </h3>
+      </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-1"></div>
+            <div class="col-md-6">
+                <div class="cart-cover">
+                    <h1>CART</h1>
+                </div>
+
+                <div class="cart-info"></div>
+            </div>
+            <div class="col-md-4">
+                <div class="summary-cover">
+                    <h3>ORDER SUMMARY</h3>
+                    <h5>Delivery to</h5>
+
+                    <form>
+                        <input type="text" id="address" name="address">
+                    </form>
+
+                    <div class="total">
+
+                    </div>
+                    
+                   
+                </div>
+            </div>
+            <div class="col-md-1"></div>
+        </div>
+    </div>
+    <script src="cartScript.js"></script>
+</body>
+
+
+<footer class="bg-dark text-white text-center text-lg-start">
+  <div class="container p-4">
+    <div class="row">
+      <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
+        <a class="navbar-brand" href="#">Burger's</a>
+      </div>
+      <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+        <h5 class="text-uppercase">Webpages</h5>
+        <ul class="list-unstyled mb-0">
+          <li> <a href="index.html" class="text-white">Home</a> </li>
+          <li> <a href="" class="text-white">Order</a> </li>
+          <li> <a href="" class="text-white">Reward</a> </li>
+          <li> <a href="" class="text-white">Contact</a> </li>
+        </ul>
+      </div>
+      <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+        <h5 class="text-uppercase">Featured</h5>
+        <ul class="list-unstyled">
+          <li> <a href="#!" class="text-white"></a> </li>
+          <li> <a href="#!" class="text-white"></a> </li>
+          <li> <a href="#!" class="text-white"></a> </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="text-center p-3" style="background-color: rgb(32, 32, 32)">
+    © 2020 - 2021 Copyright:
+    <a>Desmond Koh, Herman Cho</a>
+  </div>
+</footer>
+</html>
