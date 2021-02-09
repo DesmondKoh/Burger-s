@@ -38,6 +38,11 @@ header a:hover{
     margin-left: auto;
 }
 
+.cart-img{
+    width: 45px;
+    margin-top: -7px;
+}
+
 .active{
     text-decoration: underline;
     color: #FFBB34;
@@ -220,7 +225,6 @@ footer{
     font-weight: lighter;
 }
 
-
 #addToCart{
     text-align: center;
     color: black;
@@ -230,10 +234,23 @@ footer{
     background-color: rgb(5, 226, 5);
 }
 
+.delete{
+    background-color: rgb(226, 5, 5);
+}
+
+.remove{
+    color: white;
+}
+
+.remove:hover{
+    color: rgb(173, 173, 173);
+}
+
 .cart-body{
     margin-top: 170px;
-    color: white;
+    color: rgb(202, 202, 202);
  }
+ 
 .cart-cover{
     background-color: whitesmoke;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;

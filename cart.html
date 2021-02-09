@@ -34,10 +34,13 @@
               <a class="nav-link" href="order.html">Order</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="reward.html">Reward</a>
+              <a class="nav-link" href="">Reward</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="contact.html">Contact</a>
+              <a class="nav-link" href="">Contact</a>
+            </li>  
+            <li class="nav-item">
+              <a class="nav-link" href="cart.html"><img class="cart-img" src="images/cart.png"></a>
             </li>  
           </ul>
         </div>    
@@ -52,6 +55,16 @@
         <h3>Loading cart... </h3>
       </div>
 
+      <div class="modal fade" id="deleteFromCart" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content delete">
+            <div class="modal-body">
+              <h3>Item deleted from cart</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+
     <div class="container">
         <div class="row">
             <div class="col-md-1"></div>
@@ -59,23 +72,17 @@
                 <div class="cart-cover">
                     <h1>CART</h1>
                 </div>
-
                 <div class="cart-info"></div>
             </div>
             <div class="col-md-4">
                 <div class="summary-cover">
                     <h3>ORDER SUMMARY</h3>
                     <h5>Delivery to</h5>
-
                     <form>
                         <input type="text" id="address" name="address">
                     </form>
-
                     <div class="total">
-
-                    </div>
-                    
-                   
+                    </div>     
                 </div>
             </div>
             <div class="col-md-1"></div>
