@@ -9,6 +9,7 @@ $(document).ready(function () {
 })
 
 function getCart(){
+    $(".cart-info").html("") 
     var settings = {
         "async": true,
         "crossDomain": true,
@@ -22,12 +23,12 @@ function getCart(){
       }
       $.ajax(settings).done(function (response) {
         for (let i = 0; i < response.length; i++){
-            loadMenuInfo(response[i].ItemId)
+            loadItem(response[i].ItemId, response[i]._id)
         }
       });
 }
 
-function loadMenuInfo(id){
+function loadItem(id, objectid){
       var setting = {
         "async": true,
         "crossDomain": true,
@@ -40,7 +41,7 @@ function loadMenuInfo(id){
         }
       }
   
-        $.ajax(setting).done(function (response) {    
+        $.ajax(setting).done(function (response) {       
             for (let j = 0; j < response.length; j++) {   
                 if(id == response[j].Id){ 
                     $(".cart-info").append(`<div class="row">
@@ -53,17 +54,17 @@ function loadMenuInfo(id){
                                             </div>
                                             <div class="col-md-2 right-align">
                                                 <h4>$`+response[j].Price+`</h4>
-                                                <a href="#" class="item-remove" id="`+response[j].Id+`">Remove</a>
+                                                <a href="#" class="remove" id="`+objectid+`">Remove</a>
                                             </div>
                                         </div>
                                         <hr>`)
 
                     total += response[j].Price
                     loadSummary(total)
+                    console.log(response)
                 }        
             }
-        });
-    
+        }); 
 }
 
 function loadSummary(total){
@@ -95,3 +96,34 @@ function loadSummary(total){
                         </div>
                     </div>`)
 }
+
+function deleteItem(id){
+    var settings = {
+        "async": true,
+        "crossDomain": true,
+        "url": "https://burgers-e911.restdb.io/rest/cart/" + id,
+        "method": "DELETE",
+        "headers": {
+          "content-type": "application/json",
+          "x-apikey": APIKEY,
+          "cache-control": "no-cache"
+        }
+      }
+
+      $.ajax(settings).done(function (response) {
+        console.log(response);
+        getCart();
+      });
+}
+
+$(".cart-info").on("click", ".remove", function(){  
+    $("#deleteFromCart").modal("show");
+
+    setTimeout(function(){
+      $("#deleteFromCart").modal("hide"); 
+     }, 1000);  
+
+    deleteItem(this.id); 
+});
+
+
