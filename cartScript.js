@@ -5,11 +5,13 @@ $(document).ready(function () {
     getCart();  
     setTimeout(function(){
         $(".loader").fadeOut("slow"); 
-       }, 7000);  
+       }, 4000);  
 })
 
 function getCart(){
-    $(".cart-info").html("") 
+    $(".items").html("") 
+    $(".summary-info").html("")
+    total = 0;
     var settings = {
         "async": true,
         "crossDomain": true,
@@ -40,25 +42,28 @@ function loadItem(id, objectid){
           "cache-control": "no-cache"
         }
       }
-  
+      
+      let item_amount = 0;
         $.ajax(setting).done(function (response) {       
-            for (let j = 0; j < response.length; j++) {   
+            for (let j = 0; j < response.length; j++) {  
                 if(id == response[j].Id){ 
-                    $(".cart-info").append(`<div class="row">
-                                            <div class="col-md-2">
-                                            <img src="https://burgers-e911.restdb.io/media/`+ response[j].Image + `?key=` + APIKEY + `">
+                    $(".items").append(`<div class="row">
+                                                <div class="col-md-2">
+                                                    <img src="https://burgers-e911.restdb.io/media/`+ response[j].Image + `?key=` + APIKEY + `">
+                                                </div>
+                                                <div class="col-md-8">
+                                                    <h4>`+response[j].Name+`</h4>
+                                                    <h5>$`+response[j].Price+`</h5>
+                                                </div>
+                                                <div class="col-md-2 right-align">
+                                                    <h4>Qty: 1</h4>
+                                                    <a href="#" class="remove" id="`+objectid+`">Remove</a>
+                                                </div>
                                             </div>
-                                            <div class="col-md-8">
-                                                <h4>`+response[j].Name+`</h4>
-                                                <h5>Qty: 1</h5>
-                                            </div>
-                                            <div class="col-md-2 right-align">
-                                                <h4>$`+response[j].Price+`</h4>
-                                                <a href="#" class="remove" id="`+objectid+`">Remove</a>
-                                            </div>
-                                        </div>
-                                        <hr>`)
-
+                                            <hr>`)
+                    
+                    item_amount++;
+                    $("#items").html("<h2>ITEMS: " + item_amount)
                     total += response[j].Price
                     loadSummary(total)
                     console.log(response)
@@ -69,32 +74,32 @@ function loadItem(id, objectid){
 
 function loadSummary(total){
     let deliveryfee = 4;
-    $(".total").html(`<div class="row">
-                        <div class="col-md-6">
-                            <h5>Subtotal:</h5>
-                        </div>
-                        <div class="col-md-6 right-align">
-                            <h5>$`+total+`</h5>
-                        </div>
-                    </div>
+    $(".summary-info").html(` <div class="row">
+                                    <div class="col-md-6">
+                                        <h5>Subtotal:</h5>
+                                    </div>
+                                    <div class="col-md-6 right-align">
+                                        <h5>$`+total+`</h5>
+                                    </div>
+                                </div>
 
-                    <div class="row">
-                        <div class="col-md-6">
-                            <h5>Delivery Fee:</h5>
-                        </div>
-                        <div class="col-md-6 right-align">
-                            <h5>$`+deliveryfee+`</h5>
-                        </div>
-                    </div>
-                    <hr>
-                    <div class="row">
-                        <div class="col-md-6">
-                            <h5>Total:</h5>
-                        </div>
-                        <div class="col-md-6 right-align">
-                            <h5>$`+(total+deliveryfee)+`</h5>
-                        </div>
-                    </div>`)
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <h5>Delivery Fee:</h5>
+                                    </div>
+                                    <div class="col-md-6 right-align">
+                                        <h5>$`+deliveryfee+`</h5>
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <h5>Total:</h5>
+                                    </div>
+                                    <div class="col-md-6 right-align">
+                                        <h5>$`+(total+deliveryfee)+`</h5>
+                                    </div>
+                                </div>`)
 }
 
 function deleteItem(id){
@@ -116,14 +121,12 @@ function deleteItem(id){
       });
 }
 
-$(".cart-info").on("click", ".remove", function(){  
+$(".items").on("click", ".remove", function(){  
     $("#deleteFromCart").modal("show");
-
     setTimeout(function(){
       $("#deleteFromCart").modal("hide"); 
      }, 1000);  
 
     deleteItem(this.id); 
 });
-
 

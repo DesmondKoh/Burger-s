@@ -61,6 +61,7 @@
     <lottie-player src="https://assets7.lottiefiles.com/packages/lf20_6saApy.json"  background="transparent"  speed="1"  style="width: 280px; height: 280px;"  loop  autoplay></lottie-player>   
     <h3>Loading cart... </h3>
   </div>
+   
 
       <div class="modal fade" id="deleteFromCart" tabindex="-1" role="dialog">
         <div class="modal-dialog" role="document">
@@ -72,29 +73,39 @@
         </div>
       </div>
 
-    <div class="container">
+      <div class="container">
+        <h1 class="cart-text">MY CART</h1>
         <div class="row">
-            <div class="col-md-1"></div>
-            <div class="col-md-6">
-                <div class="cart-cover">
-                    <h1>CART</h1>
-                </div>
-                <div class="cart-info"></div>
+          <div class="col-md-1"></div>
+          <div class="col-md-6">
+            <div class="item-cover">
+              <div class="row">
+                <div class="col-md-6" id="items"></div>
+                <div class="col-md-6"><h5>Estimate delivery time: <br>35 mins</h5></div>
+                <div class="items"></div>
+              </div>
+
             </div>
-            <div class="col-md-4">
-                <div class="summary-cover">
-                    <h3>ORDER SUMMARY</h3>
-                    <h5>Delivery to</h5>
-                    <form>
-                        <input type="text" id="address" name="address">
-                    </form>
-                    <div class="total">
-                    </div>     
+          </div>
+          <div class="col-md-4">
+            <div class="summary-cover">
+              <h2>ORDER SUMMARY</h2>
+              <h5>Delivering to</h5>
+              <form>
+                <div class="form-group">
+                  <input type="text" id="address"  placeholder="Address">
                 </div>
+              </form>
+              <div class="summary-info"></div>
+              <div class="voucher-text right-align">
+                  <a href="#" id="voucher">Voucher</a>
+              </div>
+              <button type="button" class="btn btn-success">Checkout</button>
             </div>
-            <div class="col-md-1"></div>
+          </div>
+          <div class="col-md-1"></div>
         </div>
-    </div>
+      </div>
     <script src="cartScript.js"></script>
 </body>
 
