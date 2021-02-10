@@ -56,8 +56,18 @@ header a:hover{
 }
 
 .cart-img{
-    width: 45px;
-    margin-top: -7px;
+    height: 100%;
+    width: 100%;
+    margin-top: 5px;
+    margin-right: 50px;
+    background-image: url(images/cart.png);
+    background-size: 40px;
+    background-repeat: no-repeat;
+}
+
+
+.cart-img:hover{
+    background-image: url(images/cart-hover.png);
 }
 
 .active{
@@ -251,6 +261,12 @@ footer{
     background-color: rgb(5, 226, 5);
 }
 
+
+
+.cart-header .cart-img{
+    background-image: url(images/cart-hover.png);
+}
+
 .delete{
     background-color: rgb(226, 5, 5);
 }
@@ -371,7 +387,7 @@ footer{
     font-size: 15px;
 }
 
-    @media screen and (max-width:414px)
+@media screen and (max-width:414px)
 {
     header h1{
         font-size: 60px;
