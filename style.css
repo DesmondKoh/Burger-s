@@ -4,7 +4,7 @@ body{
     
 }
 
-.index-header{
+.index-header, .account-header{
     background-image: url(images/background.png) ;
     background-repeat: no-repeat;
     background-position: center;
@@ -38,6 +38,23 @@ header a:hover{
     margin-left: auto;
 }
 
+.dropdown-menu{
+    background: transparent;
+    border: none;
+}
+
+.dropdown-menu .dropdown-item{
+    background: transparent;
+    margin-left: 25px;
+    margin-bottom: 5px;
+    color: white;
+}
+
+.dropdown-item:hover{
+    background: transparent;
+    color: #FFBB34;
+}
+
 .cart-img{
     width: 45px;
     margin-top: -7px;
@@ -48,7 +65,7 @@ header a:hover{
     color: #FFBB34;
 }
 
-header h1{
+.index-header h1{
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     padding-top: 40vmin;
     font-size: 85px;
@@ -57,7 +74,7 @@ header h1{
     letter-spacing: 3px;
 }
 
-header h2{
+.index-header h2{
     font-family: Algerian;
     padding-bottom: 40vmin;
     font-size: 40px;
@@ -289,8 +306,72 @@ footer{
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
+.account-header{
+    padding: 25vmin 0 20vmin 0;
+}
 
-@media screen and (max-width:414px)
+.account-cover{
+    border: 1px solid rgba(255, 255, 255, 0.418);
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.user-icon{
+    padding: 10vmin 0 13vmin 0;
+    width: 100px;
+    margin: 100px;
+}
+
+.account-cover .col-md-1{
+    padding: 100px;
+}
+
+.account-cover .col-md-4{
+    text-align: center;
+    border-right: 0.4px solid rgba(102, 102, 102, 0.445);
+}
+
+.account-cover .col-md-8{
+    padding: 10vmin 0 15vmin 0;
+    padding-left: 80px;
+}
+
+.account-cover h1{
+    color: white;
+    font-size: 35px;
+}
+
+.account-cover h5{
+    color: white;
+    font-weight: lighter;
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.account-cover input{
+    color: whitesmoke;
+    font-size: 23px;
+    width: 400px;
+    margin-top: 10px;
+    border: none;
+    padding-top: 20px;
+    background: transparent;
+    border-bottom: 2px solid rgb(168, 168, 168);
+}
+
+.account-cover button{
+    margin-top: 15px;
+    font-size: 20px;
+    padding: 5px 30px 5px 30px;
+}
+
+.account-cover h6, .account-cover a{
+    color: whitesmoke;
+    font-weight: lighter;
+    margin-top: 20px;
+    font-size: 15px;
+}
+
+    @media screen and (max-width:414px)
 {
     header h1{
         font-size: 60px;
