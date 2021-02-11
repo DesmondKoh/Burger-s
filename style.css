@@ -65,7 +65,6 @@ header a:hover{
     background-repeat: no-repeat;
 }
 
-
 .cart-img:hover{
     background-image: url(images/cart-hover.png);
 }
@@ -282,24 +281,51 @@ footer{
 .cart-body{
     margin-top: 170px;
     color: rgb(202, 202, 202);
- }
+}
  
-.cart-cover{
-    background-color: whitesmoke;
+.cart-text{
+    color: whitesmoke;
+    text-align: center;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    padding: 5px 0px 5px 20px;
-    border-radius: 10px;
-    margin-bottom: 25px;
-    color: black; 
+    margin-bottom: 50px;
 }
 
-.cart-info img{
+.item-cover{
+    margin: 5px;
+    color: whitesmoke;
+    border: 1px solid gainsboro;
+    padding: 25px;
+    border-radius: 10px;
+}
+
+.item-cover h2{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 27px;
+}
+
+.item-cover .col-md-6 h5{
+    text-align: right;
+    margin-bottom: 30px;
+}
+
+.item-cover img{
     width: 100px;
     border-radius: 5px;   
 }
 
-.cart-info h5{
+.item-cover .col-md-8 h4, .item-cover .col-md-8 h5{
+    margin-left: 20px;
+    font-size: 20px;
+}
+
+.item-cover .col-md-8 h5{
+    color: #FFBB34;
     font-weight: lighter;
+}
+
+.item-cover .col-md-2, .item-cover .col-md-2 h4{
+    font-weight: lighter;
+    font-size: 20px;
 }
 
 .item-remove{
@@ -307,20 +333,53 @@ footer{
 }
 
 #address{
-    width: 300px;
-    height: 70px;
-    border-color: gray;
-    margin-bottom: 30px;
-}
-.summary-cover{
-    background-color: whitesmoke;
-    padding: 15px;
-    color: black;
+    color: whitesmoke;
+    font-size: 20px;
+    width: 350px;
+    border: none;
+    background: transparent;
+    border-bottom: 2px solid rgb(168, 168, 168);
+    margin: 10px 0 50px;
 }
 
+.summary-cover{
+    margin: 5px;
+    color: whitesmoke;
+    border: 1px solid gainsboro;
+    padding: 25px;
+    border-radius: 10px;
+}
+
+.summary-cover h2{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 27px;
+}
+
+.summary-cover .col-md-6 h5{
+    font-size: 25px;
+    font-weight: lighter;
+}
 .summary-cover h3{
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
+
+.voucher-text{
+    margin-top:10px;
+}
+
+#voucher{
+    color: white;
+}
+
+#voucher:hover{
+    color: rgb(136, 136, 136);
+}
+
+.summary-cover button{
+    margin-top: 20px;
+    width: 350px;
+}
+
 
 .account-header{
     padding: 25vmin 0 20vmin 0;
@@ -329,6 +388,7 @@ footer{
 .account-cover{
     border: 1px solid rgba(255, 255, 255, 0.418);
     background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 30px;
 }
 
 .user-icon{
