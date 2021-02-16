@@ -2,12 +2,13 @@
 $(document).ready(function () {
  const APIKEY = "601acf656adfba69db8b6d25";
 
- let username = $("#username").val();
- let password = $("#password").val();
+
  let point = 0;
 
  $("#register").on("click", function () {
 
+ let username = $("#username").val();
+ let password = $("#password").val();
  
  let jsondata = {
     "username":username,
