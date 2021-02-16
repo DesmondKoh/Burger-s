@@ -251,9 +251,9 @@ footer{
     font-weight: lighter;
 }
 
-#addToCart{
+.modal{
     text-align: center;
-    color: black;
+    color: white;
 }
 
 .success{
@@ -682,3 +682,13 @@ footer{
     }
   }
   
+
+  .voucherContainer{
+
+    display:flex;
+    justify-content: center;
+    border-color:lightblue;
+    border-style: solid;
+    height:50vh;
+    width:30vw;
+  }
