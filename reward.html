@@ -8,12 +8,12 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
   <link href="style.css" rel="stylesheet" type="text/css" />
   
-
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-  
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
 </head>
-
-
 <body>
 <header class="index-header"> 
   <div class="container fixed-top">
@@ -21,23 +21,23 @@
     <!--Navigation Bar-->
     <nav class="navbar navbar-expand-lg">
       <div class="container-fluid">
-        <a class="navbar-brand" href="index.html">Burger's</a>
+        <a class="navbar-brand" href="index.html">Reward — Burger's</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link active" href="index.html">Home</a>  
+              <a class="nav-link" id="home" href="#">Home</a>     
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="order.html">Order</a>
+              <a class="nav-link" id="order" href="#">Order</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="reward.html">Reward</a>
+              <a class="nav-link active" id="reward" href="#">Reward</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="contact.html">Contact</a>
+              <a class="nav-link" id="contact" href="#">Contact</a>
             </li>  
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -49,85 +49,56 @@
               </div>
             </li>
             <li class="nav-item">
-              <a class="nav-link cart-img" href="cart.html"></a>
+              <a class="nav-link cart-img" id="cart" href="#"></a>
             </li>  
           </ul>
         </div>    
       </div>
     </nav>
-  </div>   
-  
-</header>
 
+  </div>   
+</header>
 
 <div class = "container-fluid">
    <div class = "container-points">
      <div class = "row">
         <div class  = "col-md-7 col-12">
-
             <p> Current points is : </p>
             <br>
             <br>
             <br>
-              
-
             <p> Sign up as a member and get 10% off for your first order </p>
-            <p class = voucherContainer> Vouchers You have</p>
-
-
-
-
-
-
-            
-
         </div>
         
-        
-       
-        
-       
         <div class  = "col-md-3 ">
-
-            <p> WHEEL  OF    FORTUNE</p>
+            <p> WHEEL OF FORTUNE</p>
             <br>
             <br>
             <br>
             <br>
-            
+    
              <div id="mainbox" class="mainbox">
                  <div id="box" class="box">
                     <div class="box1">
-                     <span class="span1"><b>$2 Voucher</b> </span>
-                     <span class="span2"><b>10% off Voucher</b> </span>
-                     <span class="span3"><b>10% off Voucher</b> </span>
-                     <span class="span4"><b>$4 off Voucher</b> </span>
+                     <span class="span1"><b>$2 Coupon</b> </span>
+                     <span class="span2"><b>Free Sides Coupon</b> </span>
+                     <span class="span3"><b>10% off Coupon</b> </span>
+                     <span class="span4"><b>Free Deserts Coupon</b> </span>
                   </div>
                   <div class="box2">
-                    <span class="span1"><b>15% off Voucher</b> </span>
-                    <span class="span2"><b>$3 Voucher</b> </span>
-                    <span class="span3"><b>20% off Voucher</b> </span>
-                    <span class="span4"><b>$5 Voucher</b> </span>
+                    <span class="span1"><b>15% off Coupon</b> </span>
+                    <span class="span2"><b>$3 Coupon</b> </span>
+                    <span class="span3"><b>1 for 1 Mains</b> </span>
+                    <span class="span4"><b>Free Deserts Coupon</b> </span>
                   </div>
-            <button class="spin" onclick="rotateFunction()">SPIN</button>
-
-       </div>
-    </div>
-
-
-
+              <button class="spin" onclick="rotateFunction()">SPIN</button>
+             </div>
+          </div>
         </div>
-
    </div>
 </div>
-
-
-
-
+<script src="script.js"></script>
+<script src="reward.js" ></script>
 </body>
-
-  <script src="reward.js" ></script>
- 
-
 
 </html>

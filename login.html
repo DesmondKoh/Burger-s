@@ -14,40 +14,51 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </head>
 <header class="account-header"> 
+  <div class="modal fade" id="notFound" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content delete">
+        <div class="modal-body">
+          <h3>User not found or Password incorrect. <br>Please try again</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+
     <div class="container fixed-top">
 
-    <!--Navigation Bar-->
-    <nav class="navbar navbar-expand-lg">
+    
+      <!--Navigation Bar-->
+      <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
-          <a class="navbar-brand" href="index.html">Burger's</a>
+          <a class="navbar-brand" href="index.html">Login — Burger's</a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <ul class="navbar-nav">
               <li class="nav-item">
-                <a class="nav-link" href="index.html">Home</a>    
+                <a class="nav-link" id="home" href="#">Home</a>     
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="order.html">Order</a>
+                <a class="nav-link" id="order" href="#">Order</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="reward.html">Reward</a>
+                <a class="nav-link" id="reward" href="#">Reward</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="contact.html">Contact</a>
+                <a class="nav-link" id="contact" href="#">Contact</a>
               </li>  
               <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   Account
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                  <a class="dropdown-item" href="login.html">Login</a>
+                  <a class="dropdown-item active" href="login.html">Login</a>
                   <a class="dropdown-item" href="register.html">Register</a>
                 </div>
               </li>
               <li class="nav-item">
-                <a class="nav-link cart-img" href="cart.html"></a>
+                <a class="nav-link cart-img" id="cart" href="#"></a>
               </li>  
             </ul>
           </div>    
@@ -73,7 +84,7 @@
                                 </div>
                                 <h6>Don't have an account? <a href="register.html">Register</a></h6>  
                                 <div>
-                                    <button type="submit" class="btn btn-outline-light">Login</button>      
+                                    <button type="button" class="btn btn-outline-light" id="login">Login</button>      
                                 </div>
                             </form>
                         </div>
@@ -86,8 +97,10 @@
 </header>
 
 <body>
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script> AOS.init(); </script>
+  <script src="script.js"></script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script> AOS.init() </script>
+  <script src="login.js" ></script>
 </body>
 
 <footer class="bg-dark text-white text-center text-lg-start">
