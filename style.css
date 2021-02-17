@@ -380,6 +380,26 @@ footer{
     width: 350px;
 }
 
+.complete-loader img{
+    width: 130px;
+    margin-bottom: 20px;
+}
+
+.complete-loader h2{
+    font-weight: lighter;
+}
+
+.complete-loader h3{
+    font-size: 30px;
+    margin-top: 50px;
+}
+
+.complete-loader #earned-point{
+    font-size: 30px;
+    margin-top: 5px;
+    color:rgb(173, 173, 173)
+}
+
 
 .account-header{
     padding: 25vmin 0 20vmin 0;
@@ -445,6 +465,47 @@ footer{
     font-weight: lighter;
     margin-top: 20px;
     font-size: 15px;
+}
+
+#invalid, #invalid-address{
+    color: red;
+    margin-top: 15px;
+    font-size: 18px;
+}
+
+#registered{
+    color: green;
+    margin-top: 15px;
+    font-size: 18px;
+}
+
+.modal-content{
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modal-body{
+    text-align: left;
+}
+
+#voucher-modal h1{
+    font-size: 25px;
+}
+
+#voucher-modal h3{
+    font-size: 18px;
+    font-weight: lighter;
+    color:rgb(136, 136, 136);
+}
+
+#voucher-modal .col-md-3{
+    text-align: right;
+}
+
+#voucher-modal a{
+    font-size: 15px;
+    font-weight: lighter;
+    text-align: right;
+    color: white;
 }
 
 @media screen and (max-width:414px)
@@ -682,13 +743,3 @@ footer{
     }
   }
   
-
-  .voucherContainer{
-
-    display:flex;
-    justify-content: center;
-    border-color:lightblue;
-    border-style: solid;
-    height:50vh;
-    width:30vw;
-  }
