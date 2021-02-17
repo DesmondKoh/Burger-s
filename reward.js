@@ -1,4 +1,5 @@
 $(document).ready(function () {
+  
   var settings = {
     "async": true,
     "crossDomain": true,
@@ -15,13 +16,14 @@ $(document).ready(function () {
     for(let i = 0; i < response.length; i++){
       let account = $("#navbarDropdownMenuLink").text()
       if(account == "Account"){
-        $(".current-point").html("<p>Please login to view points,</p>")   
+        $(".current-point").html("<p>Please login to view points</p>")   
       }
       else if(account == response[i].username){   
         $(".current-point").html("<p>You have " + response[i].point + " points</p>")  
       }
     }
   });
+ 
 })
  
 function rotateFunction(){
@@ -81,7 +83,21 @@ function rotateFunction(){
   $.ajax(settings).done(function (response) {
   })
   spinsLeft -= 1;
+
+  point -= 100;
+
+
+  
 }
 
  
+
+function loadCoupons{
+
+ //not done yet
+
+
+
+
+}
 
