@@ -1,3 +1,4 @@
+let APIKEY = "601acf656adfba69db8b6d25";
 let user = getUser();
 
 $(document).ready(function () { 
@@ -10,7 +11,7 @@ $(document).ready(function () {
     $("#register").attr("href", "register.html?user=" + user)
     
     if(user != undefined && user != "undefined"){
-        $("#navbarDropdownMenuLink").html(user)
+        getUsername(getUser())
         $(".dropdown-menu").html('<a class="dropdown-item" id="logout" href="index.html?user=undefined">Logout</a>')
     }
 })
@@ -30,3 +31,30 @@ function getUser(){
     var user = getUrlParameter("user");
     return user; 
 }
+
+
+function getUsername(id){
+    let username = ""
+    var settings = {
+        "async": true,
+        "crossDomain": true,
+        "url": "https://burgers-e911.restdb.io/rest/account",
+        "method": "GET",
+        "headers": {
+          "content-type": "application/json",
+          "x-apikey": APIKEY,
+          "cache-control": "no-cache"
+        }
+      }
+
+      $.ajax(settings).done(function (response) {
+        for(let i = 0; i < response.length; i++){
+            if(id == response[i]._id){
+                $("#navbarDropdownMenuLink").html(response[i].username)
+            }
+        } 
+    });
+    
+}
+
+

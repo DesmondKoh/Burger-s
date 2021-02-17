@@ -1,5 +1,3 @@
-let APIKEY = "601acf656adfba69db8b6d25";
-
 $(document).ready(function () { 
   loadMenu() 
   setTimeout(function(){

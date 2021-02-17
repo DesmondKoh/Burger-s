@@ -1,6 +1,11 @@
-let APIKEY = "601acf656adfba69db8b6d25";
+$("#invalid").hide();
+$(".loader").hide(); 
 
-$("#login").on("click", function () {
+$("#login-btn").on("click", function () {
+  $(".loader").show();
+    setTimeout(function(){
+      $(".loader").fadeOut("slow"); 
+    }, 2000);  
     let username = $("#username").val();
     let password = $("#password").val();
 
@@ -23,12 +28,8 @@ $("#login").on("click", function () {
             }
             else
             {
-                $("#notFound").modal("show");
-                setTimeout(function(){
-                  $("#notFound").modal("hide"); 
-                 }, 1000);  
+              $("#invalid").show();
             }
         }
       });
-
 })

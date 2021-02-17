@@ -1,22 +1,17 @@
+let point = 0;
+$("#registered").hide();
 
-$(document).ready(function () {
- const APIKEY = "601acf656adfba69db8b6d25";
+$("#register-btn").on("click", function () {
+  $("#registered").show();
+  let username = $("#username").val();
+  let password = $("#password").val();
 
-
- let point = 0;
-
- $("#register").on("click", function () {
-
- let username = $("#username").val();
- let password = $("#password").val();
- 
- let jsondata = {
+  let jsondata = {
     "username":username,
     "password": password,
     "point":point
-
-     
   };
+  
   let settings = {
     "async": true,
     "crossDomain": true,
@@ -29,13 +24,8 @@ $(document).ready(function () {
     },
     "processData": false,
     "data": JSON.stringify(jsondata)
-
   }
 
- $.ajax(settings).done(function (response) {
-    console.log(response);
-})
-
-})
-
+  $.ajax(settings).done(function (response) {
+  })
 })
