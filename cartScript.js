@@ -129,7 +129,6 @@ function deleteItem(id){
       }
 
       $.ajax(settings).done(function (response) {
-        console.log(response);
         getCart();
       });
 }
@@ -245,7 +244,6 @@ function loadReward(couponid, id){
    
     $.ajax(settings).done(function (response) {
         for(let j = 0; j < response.length; j++){
-            console.log(response[j].couponId)
             if(couponid == response[j].couponId){    
                 $("#display-voucher").append(`<div class="row">
                                                 <div class="col-md-9">
@@ -253,7 +251,7 @@ function loadReward(couponid, id){
                                                 <h3 class="coupon-id">`+response[j]._id+`</h3>
                                                 </div>
                                                 <div class="col-md-3">
-                                                <a href="#" class="use" id="`+id+`">Use</a>
+                                                <a href="#" class="use" id="`+id+`" value="`+response[j]._id+`">Use</a>
                                                 </div>
                                             </div>
                                             <hr>`)
@@ -266,7 +264,10 @@ function loadReward(couponid, id){
 $("#display-voucher").on("click", ".use", function(){ 
     $("#voucher-id").html(this.id) 
     $('#voucher-modal').modal('hide')
-    
+    loadDiscountTotal($("#" + this.id).attr("value"))
+})
+
+function loadDiscountTotal(id){
     var settings = {
         "async": true,
         "crossDomain": true,
@@ -281,7 +282,7 @@ $("#display-voucher").on("click", ".use", function(){
    
     $.ajax(settings).done(function (response) {
         for (let j = 0; j < response.length; j++) {
-            if($(".coupon-id").text() == response[j]._id){
+            if(id == response[j]._id){
                 if(response[j].price == 0){
                     discount = response[j].percent + "%";
                     d_total = (1 - response[j].percent) * $(".total").attr("id")
@@ -309,7 +310,7 @@ $("#display-voucher").on("click", ".use", function(){
             }
         }
     }) 
-});
+}
 
 //Remove coupon from user
 function removeCoupon(id){
