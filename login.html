@@ -14,19 +14,12 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </head>
 <header class="account-header"> 
-  <div class="modal fade" id="notFound" tabindex="-1" role="dialog">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content delete">
-        <div class="modal-body">
-          <h3>User not found or Password incorrect. <br>Please try again</h3>
-        </div>
-      </div>
-    </div>
+  <div class="loader">
+    <lottie-player src="https://assets7.lottiefiles.com/packages/lf20_6saApy.json"  background="transparent"  speed="1"  style="width: 280px; height: 280px;"  loop  autoplay></lottie-player>   
+    <h3>Attempting Login... </h3>
   </div>
 
     <div class="container fixed-top">
-
-    
       <!--Navigation Bar-->
       <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
@@ -53,8 +46,8 @@
                   Account
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                  <a class="dropdown-item active" href="login.html">Login</a>
-                  <a class="dropdown-item" href="register.html">Register</a>
+                  <a class="dropdown-item active" id="login" href="#">Login</a>
+                  <a class="dropdown-item" id="register" href="#">Register</a>
                 </div>
               </li>
               <li class="nav-item">
@@ -84,7 +77,7 @@
                                 </div>
                                 <h6>Don't have an account? <a href="register.html">Register</a></h6>  
                                 <div>
-                                    <button type="button" class="btn btn-outline-light" id="login">Login</button>      
+                                    <button type="button" id="login-btn" class="btn btn-outline-light" id="login">Login</button>      
                                 </div>
                             </form>
                         </div>
