@@ -1,4 +1,12 @@
+var point = 0;
+var spinLeft = 0 ;
+var responseID = 0;
+
+
 $(document).ready(function () {
+
+
+
   
   var settings = {
     "async": true,
@@ -19,15 +27,36 @@ $(document).ready(function () {
         $(".current-point").html("<p>Please login to view points</p>")   
       }
       else if(account == response[i].username){   
-        $(".current-point").html("<p>You have " + response[i].point + " points</p>")  
+        $(".current-point").html("<p>You have " + response[i].point + " points</p>")
+          
+        point = response[i].point;
+        
+        spinLeft = response[i].spinLeft;
+        responseID = response[i]._id;
+        
+        
+        
       }
     }
+       
   });
  
 })
  
+
+
+
+
+
+
+
+
+
+
+
+
 function rotateFunction(){
-  var spinsLeft = 1 ;
+  
   var couponId;
   var couponName;  
   let account = $("#navbarDropdownMenuLink").text()
@@ -81,18 +110,32 @@ function rotateFunction(){
   }
 
   $.ajax(settings).done(function (response) {
+
+    console.log(response);
   })
-  spinsLeft -= 1;
+  spinLeft -= 1;
 
   point -= 100;
-
+ 
+  
 
   
 }
 
+
+console.log(point);
+
+function postUpdatedAccountInfo(){
+  
+
+
+
+
+
+}
  
 
-function loadCoupons{
+function loadRewards(){
 
  //not done yet
 

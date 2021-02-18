@@ -742,4 +742,17 @@ footer{
       right: -40px;
     }
   }
-  
+  .voucherContainer{
+
+    display:flex;
+    justify-content: center;
+    border-color:lightblue;
+    border-style: solid;
+    height:50vh;
+    width:30vw;
+    border-radius: 20px;
+  }
+
+  h1, h1 {
+    font-size: 60px;
+}
