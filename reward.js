@@ -4,6 +4,8 @@ let point = 0;
 
 $(document).ready(function () {
   $("#wheel-arrow").hide()
+
+  //Load points
   var settings = {
     "async": true,
     "crossDomain": true,
@@ -42,6 +44,7 @@ $(document).ready(function () {
  
 let couponId;
 let couponName;  
+//Spin wheel on "spin button click"
 function rotateFunction(){
   if(point >= 50){
     var possibleNumbersArray = [1800,1900,2050,2475];
@@ -79,6 +82,7 @@ function rotateFunction(){
   
 }
 
+//Add reward to reward table in RestDb
 function updateReward(couponId){
   let account = $("#navbarDropdownMenuLink").text()
   let id = couponId;
@@ -103,6 +107,7 @@ function updateReward(couponId){
   });
 }
 
+//Deduct point
 function deductPoint(){
   let account = $("#navbarDropdownMenuLink").text()
   var deductedpoint = point - 50
@@ -125,9 +130,8 @@ function deductPoint(){
   });
 }
 
-
+//Load all rewards available
 function loadRewards(){
-
   var settings = {
     "async": true,
     "crossDomain": true,
@@ -156,106 +160,3 @@ function loadRewards(){
     }   
   });
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-function rotateFunction(){
-  
-  var couponId;
-  var couponName;  
-  let account = $("#navbarDropdownMenuLink").text()
-  
-  var possibleNumbersArray = [1800,1900,2050,2475];
-  randomNum = Math.round(Math.random() * 4);
-  
-  var deg = possibleNumbersArray[randomNum];
-  document.getElementById('box').style.transform = "rotate("+deg+"deg)";
- 
-  if (deg <= 1800)
-  {
-    couponId = 2;
-    couponName = '$4 OFF';
-  } 
-  else if (deg <= 1900)
-  {
-    couponId = 4;
-    couponName = '20% OFF';
-  }
-  else if (deg <= 2050)
-  {
-    couponId = 3;
-    couponName = '10% OFF';
-  }
-  else if (deg <= 2475)
-  {
-    couponId = 1;
-    couponName = '$2 OFF';
-  }
-  
-  
-  let jsondata = {
-    "couponId":couponId,
-    "username": account
-  };
-
-  let settings = {
-    "async": true,
-    "crossDomain": true, 
-    "url": "https://burgers-e911.restdb.io/rest/reward",
-    "method": "POST",
-    "headers": {
-      "content-type": "application/json",
-      "x-apikey": APIKEY,
-      "cache-control": "no-cache"
-    },
-    "processData": false,
-    "data": JSON.stringify(jsondata)
-
-  }
-
-  $.ajax(settings).done(function (response) {
-
-    console.log(response);
-  })
-  spinLeft -= 1;
-
-  point -= 100;
- 
-  
-
-  
-}
-
-
-console.log(point);
-
-function postUpdatedAccountInfo(){
-  
-
-
-
-
-
-}
- 
-
-function loadRewards(){
-
- //not done yet
-
-
-
-
-}
-

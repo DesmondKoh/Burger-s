@@ -3,12 +3,14 @@ let total = 0;
 $(".complete-loader").hide();
 $("#invalid").hide();
 $("#invalid-address").hide();
+$("#invalid-order").hide();
+$(".ordering-loader").hide();
 
 $(document).ready(function () {
     getCart();  
     setTimeout(function(){
         $(".cart-loader").fadeOut("slow"); 
-       }, 4000);  
+       }, 5000);  
 })
 
 function getCart(){
@@ -27,9 +29,15 @@ function getCart(){
         }
       }
       $.ajax(settings).done(function (response) {
-        for (let i = 0; i < response.length; i++){
-            loadItem(response[i].ItemId, response[i]._id)
-        }
+            if(response.length != 0){
+                for (let i = 0; i < response.length; i++){
+                    loadItem(response[i].ItemId, response[i]._id)
+                }
+            }
+            else
+            {
+                $(".items").append(`<h4>No item in cart</h4>`)
+            } 
       });
 }
 
@@ -143,9 +151,17 @@ $("#checkout").on("click", function(){
     else if(account == "Account"){
         $("#invalid").show();
     }
+    else if($(".items").text() == "No item in cart"){
+        $("#invalid-order").show();
+    }
     else
-    {
-        $(".complete-loader").show(); 
+    {   
+        $(".ordering-loader").show();
+        setTimeout(function(){
+            $(".complete-loader").show();
+            $(".cart-loader").fadeOut("slow");   
+        }, 6000);  
+
         clearCart()
         removeCoupon($("#voucher-id").text())
         
@@ -267,6 +283,8 @@ $("#display-voucher").on("click", ".use", function(){
     loadDiscountTotal($("#" + this.id).attr("value"))
 })
 
+
+//Display discounted price
 function loadDiscountTotal(id){
     var settings = {
         "async": true,
@@ -330,34 +348,3 @@ function removeCoupon(id){
       });
 }
 
-//Remove all items from cart
-function clearCart(){
-    var settings = {
-        "async": true,
-        "crossDomain": true,
-        "url": "https://burgers-e911.restdb.io/rest/cart",
-        "method": "GET",
-        "headers": {
-          "content-type": "application/json",
-          "x-apikey": APIKEY,
-          "cache-control": "no-cache"
-        }
-      }     
-      $.ajax(settings).done(function (response) {
-        for (let j = 0; j < response.length; j++) {
-            var settings_delete = {
-                "async": true,
-                "crossDomain": true,
-                "url": "https://burgers-e911.restdb.io/rest/cart/" + response[j]._id,
-                "method": "DELETE",
-                "headers": {
-                  "content-type": "application/json",
-                  "x-apikey": APIKEY,
-                  "cache-control": "no-cache"
-                }
-            }      
-            $.ajax(settings_delete).done(function (response) {
-            });
-        }
-    });  
-}

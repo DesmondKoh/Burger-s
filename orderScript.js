@@ -5,6 +5,7 @@ $(document).ready(function () {
     }, 1500);  
 })
 
+//Load Menu
 function loadMenu(){
     var setting = {
       "async": true,
@@ -53,6 +54,7 @@ function loadMenu(){
   
 }
 
+//Add item
 function addItemToCart(id){
   $("#addToCart").modal("show");
 
@@ -82,6 +84,7 @@ function addItemToCart(id){
   });
 }
 
+//Buttons
 $(".menu-mains").on("click", "button", function(){  
   addItemToCart(this.id);
 });
