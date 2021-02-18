@@ -234,7 +234,7 @@ footer{
 .loader{
     width: 100%;
     height: 100%;
-    position: absolute;
+    position:fixed;
     top: 0;
     left: 0;
     background-color: black;
@@ -508,124 +508,21 @@ footer{
     color: white;
 }
 
-@media screen and (max-width:414px)
-{
-    header h1{
-        font-size: 60px;
-    }
-    
-    header h2{
-        font-size: 30px;
-    }
-
-    #heading{
-        font-size: 22px;
-        margin-bottom: 20px;
-    }
-
-    #title-text{
-        margin-top: -22px;
-        font-size: 50px;
-
-    }
-    
-    #title-text-2{
-        margin-top: -29px;
-        font-size: 70px;
-    }
-
-    .feature img{
-        width: 200px;
-        margin-top: -40px;
-    }
-
-    #price{
-        font-size: 60px;
-        margin-top: 10px;
-        margin-bottom: 20px;
-    }
-    
-    #description{
-        color: rgb(168, 168, 168);
-        font-size: 15px; 
-        margin-top: -10px;
-    }
-    
-    .feature button{
-        margin-top: 15px;
-        padding: 5px 50px 5px 50px;
-        color: black;
-    }
-
-    .reward{
-        text-align: center;
-    }
-    .reward img{
-        margin-top: 20px;
-        width: 200px;
-    }
-    
-    .deliver #description{
-        margin-top: -15px;
-    }
-    
-    .deliver img{
-        width: 60px;
-        margin-left: 0px;
-    }
-
-    #menu-text{
-        font-size: 17px;
-    }
-
-    .item img{
-        width: 80px;
-    }
-
-    #item-name{
-        padding-left: 25px;
-        font-size: 12px;
-    }
-
-    #item-description{
-        padding-left: 25px;
-        font-size: 8px;
-    }
-
-    #item-price{
-        font-size: 16px;
-    }
-
-    .item button{
-        font-size: 10px;
-        padding: 0px 5px 0px 5px;
-        margin-top: -5px;
-    }
+.container-points {
+    padding-top:200px;
+    padding-right: 30px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size:25px;
 }
-
-.row{
-
-    color:white;
-  }
-  .container-points {
   
-  
-   padding-top:200px;
-   padding-right: 30px;
-   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-   font-size:25px;
-  }
-  
-  /* Wheel Rewards */
-  
-  .mainbox{
+/* Wheel Rewards */
+.mainbox{
     position: relative;
     width: 500px;
-    height: 500px;
-    
-   
-  }
-  .mainbox:after{
+    height: 500px; 
+}
+
+.mainbox:after{
     position: absolute;
     content: '';
     width: 32px;
@@ -635,8 +532,9 @@ footer{
     right: -30px;
     top: 50%;
     transform: translateY(-50%);
-  }
-  .box{
+}
+
+.box{
     width: 100%;
     height: 100%;
     position: relative;
@@ -645,74 +543,87 @@ footer{
     border: 10px solid #fff;
     overflow: hidden;
     transition: all ease 5s;
-    
-  }
-  span{
+}
+
+span{
     width: 50%;
     height: 50%;
     display: inline-block;
     position: absolute;
     color: black;
     font-weight:100;
-  }
-  .span1{
+}
+  
+.span1{
     clip-path: polygon(0 92%, 100% 50%, 0 8%);
     background-color: #fffb00;
     top: 120px;
     left: 0;
-  }
-  .span2{
+}
+  
+.span2{
     clip-path: polygon(100% 92%, 0 50%, 100% 8%);
     background-color: #ff4fa1;
     top: 120px;
     right: 0;
-  }
+}
   .span3{
     clip-path: polygon(50% 0%, 8% 100%, 92% 100%);
     background-color: #ffaa00;
     bottom: 0;
     left: 120px;
-  }
+}
+
   .span4{
     clip-path: polygon(50% 100%, 92% 0, 8% 0);
     background-color: #22ff00;
     top: 0;
     left: 120px;
-  }
+}
   
-  /*rotate triangles*/
-  .box1 .span3 b{
-     transform: translate(-50%, -50%) rotate(-270deg);
-  }
-  .box1 .span1 b,
-  .box2 .span1 b{
+/*Wheel Cells*/
+.box span{
+    font-weight: bold;
+}
+
+.box span b{
+    padding-left: 40px;
+}
+
+.box1 .span3 b{
+    transform: translate(-50%, -50%) rotate(-270deg);
+}
+
+.box1 .span1 b,
+.box2 .span1 b{
     transform: translate(-50%, -50%) rotate(185deg);
-  }
-  .box2 .span3 b{
+}
+
+.box2 .span3 b{
     transform: translate(-50%, -50%) rotate(90deg);
-  }
-  .box1 .span4 b,
-  .box2 .span4 b{
+}
+
+.box1 .span4 b,
+.box2 .span4 b{
     transform: translate(-50%, -50%) rotate(-85deg);
-  }
+}
   
-  span b {
+span b {
     font-size: 17px;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
   
-  }
-  
-  .box2{
+.box2{
     width: 100%;
     height: 100%;
     transform: rotate(-135deg);
-  }
+}
   
-  /* Spin button */
-  .spin{
+/* Spin Button */
+.spin{
     position: absolute;
     top: 50%;
     left: 50%;
@@ -727,32 +638,88 @@ footer{
     font-weight: bold;
     font-size: 22px;
     cursor: pointer;
-  }
-  .spin:active{
+}
+
+.spin:active{
     width: 70px;
     height: 70px;
     font-size: 20px;
-  }
+}
   
-  .mainbox.animate:after{
+.mainbox.animate:after{
     animation: animateArrow 0.7s ease infinite;
-  }
-  @keyframes animateArrow{
+}
+
+@keyframes animateArrow{
     50%{
       right: -40px;
     }
-  }
-  .voucherContainer{
+}
 
-    display:flex;
-    justify-content: center;
-    border-color:lightblue;
-    border-style: solid;
-    height:50vh;
-    width:30vw;
-    border-radius: 20px;
-  }
+.reward-body{
+    margin-top: 250px;
+}
 
-  h1, h1 {
-    font-size: 60px;
+.reward-body h1{
+    color: white;
+    font-size: 90px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    margin-top: -40px;
+}
+
+.reward-body .current-point{
+    color: white;
+    font-size: 28px;
+    font-weight: lighter;
+    margin: 50px 0 50px;
+}
+
+.wheel{
+    text-align: center;
+    margin: 100px 0 100px;
+}
+
+.wheel h1{
+    margin-bottom: 20px;
+    font-size: 80px;
+    color:rgb(255, 208, 0)
+}
+
+#wheel-arrow{
+    width: 100px;
+    display: flex;
+    z-index: 99;
+    position:absolute;
+    margin-top: 230px;
+    margin-left: 460px;
+}
+
+.win-text{
+    text-align: center;
+    margin-left: -20px;
+}
+
+.win-text h1{
+    color: rgb(7, 163, 7);
+    font-size: 80px;;
+    margin-top: 200px;
+}
+
+.win-text h3{
+    color: rgb(7, 163, 7);
+    font-size: 40px;
+    margin-top: 0px;
+}
+
+.win-text h2{
+    color: rgb(163, 7, 7);
+    font-size: 40px;
+    margin-top: 200px;
+}
+
+/**Rewards table**/
+.table{
+    color: white;
+    margin-top: 170px;
+    font-size: 30px;
 }
