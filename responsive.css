@@ -1,0 +1,180 @@
+@media screen and (max-width:414px)
+{
+    header h1{
+        font-size: 60px;
+    }
+    
+    header h2{
+        font-size: 30px;
+    }
+
+    #heading{
+        font-size: 22px;
+        margin-bottom: 20px;
+    }
+
+    #title-text{
+        margin-top: -22px;
+        font-size: 45px;
+    }
+    
+    #title-text-2{
+        margin-top: -29px;
+        font-size: 65px;
+    }
+
+    .feature img{
+        width: 200px;
+        margin-top: -40px;
+    }
+
+    #price{
+        font-size: 60px;
+        margin-top: 10px;
+        margin-bottom: 20px;
+    }
+    
+    #description{
+        color: rgb(168, 168, 168);
+        font-size: 15px; 
+        margin-top: -10px;
+    }
+    
+    .feature button{
+        margin-top: 15px;
+        padding: 5px 50px 5px 50px;
+        color: black;
+    }
+
+    .reward{
+        text-align: center;
+    }
+    
+    .reward img{
+        margin-top: 20px;
+        width: 200px;
+    }
+    
+    .deliver #description{
+        margin-top: -15px;
+    }
+    
+    .deliver img{
+        width: 60px;
+        margin-left: 0px;
+    }
+
+    #menu-text{
+        font-size: 17px;
+    }
+
+    .item img{
+        width: 80px;
+    }
+
+    #item-name{
+        padding-left: 25px;
+        font-size: 12px;
+    }
+
+    #item-description{
+        padding-left: 20px;
+        font-size: 8px;
+    }
+
+    #item-price{
+        font-size: 16px;
+    }
+
+    .item button{
+        font-size: 10px;
+        padding: 0px 5px 0px 5px;
+        margin-top: -5px;
+    }
+
+    .fixed-top{
+        background-color: rgb(0,0,0,0.7);
+    }
+
+    .navbar-toggler-icon{
+        margin-top: -15px;
+        margin-left: -30px;
+    }
+
+    #cart{
+        height: 50px;
+    }
+
+    .reward-body h2{
+        font-size: 40px;
+    }
+
+    .reward-body h1{
+        margin-top: -10px;
+        font-size: 55px;
+    }
+
+    .mainbox{
+        position: relative;
+        width: 340px;
+        height: 340px; 
+    }
+
+    .spin{
+        width: 60px;
+        height: 60px;
+        font-size: 10px;
+    }
+
+    .spin:active{
+        width: 55px;
+        height: 55px;
+        font-size: 10px;
+    }
+
+    .span1{
+        top: 80px;
+    }
+      
+    .span2{
+        top: 80px;
+    }
+
+    .span3{
+        left: 80px;
+    }
+    
+    .span4{
+        left: 80px;
+    }
+    
+    #wheel-arrow{
+        width: 60px;
+        display: flex;
+        z-index: 99;
+        position:absolute;
+        margin-top: 150px;
+        margin-left: 310px;
+    }
+
+    .account-cover input{
+        width: 250px;
+    }
+
+    .win-text h1{
+        margin-top: 110px;
+        font-size: 40px;
+    }
+    
+    .win-text h3, .win-text h2{
+        margin-top: -15px;
+        font-size: 20px;
+    }
+
+    .complete-loader h3, .complete-loader #earned-point{
+        font-size: 15px;
+        margin-top: 50px;
+        text-align: center;
+    }
+
+}
