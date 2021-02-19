@@ -48,7 +48,9 @@ https://github.com/DesmondKoh/Burger-s
 Alternatively, the website can be viewed using the Github host.
 https://desmondkoh.github.io/Burger-s/
 
-**TestData for Logging In**
+**TestData for Logging In:**
+**Username:** herman01
+**Password:** 12345
 
 
 
