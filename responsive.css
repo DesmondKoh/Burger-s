@@ -93,7 +93,7 @@
     }
 
     .fixed-top{
-        background-color: rgb(0,0,0,0.7);
+        background-color: rgb(0,0,0,0.85);
     }
 
     .navbar-toggler-icon{
@@ -176,5 +176,4 @@
         margin-top: 50px;
         text-align: center;
     }
-
 }

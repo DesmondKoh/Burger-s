@@ -26,7 +26,7 @@ $("#login-btn").on("click", function () {
         //Check if user and password match in RestDb
         for (let j = 0; j < response.length; j++) {
             if(username == response[j].username && password == response[j].password){
-                window.open("index.html?user=" + response[j]._id);
+                window.location.replace("index.html?user=" + response[j]._id);
             }
             else
             {
