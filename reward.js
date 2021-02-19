@@ -147,10 +147,10 @@ function loadRewards(){
   $.ajax(settings).done(function (response) {
     for(let i = 0; i < response.length; i++){
       if(response[i].price == 0){
-        discount = "$" + response[i].percent
+        discount =  response[i].percent + "%"
       }
       else if(response[i].percent == 0){
-        discount = response[i].price + "%"
+        discount = "$"+ response[i].price 
       }
       $("#reward-info").append( `<tr>
                                   <th scope="row">`+response[i].couponId+`</th>
