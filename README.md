@@ -5,6 +5,9 @@
 ### Intent and Purpose
 The purpose of this website is to allow users to order from Burger's. The website also has rewards that can be claimed by the user after gaining a certain amount of points.
 
+### Github Link to Our Website
+https://desmondkoh.github.io/Burger-s/
+
 ## **Technology Used**
 * HTML
 * CSS
