@@ -6,7 +6,7 @@
 The purpose of this website is to allow users to order from Burger's. The website also has rewards that can be claimed by the user after gaining a certain amount of points.
 
 ### Gamification Concept Applied
-In our Rewards page of our food ordering website,a user can spin the wheel every 50 points accumalated ,which can be earned from ordering from our webssite,the rewards that can we earned from the spin the wheel game includes discounts that could be used when checking out after ordering.
+In our Rewards page of our food ordering website , a user can spin the wheel every 50 points accumalated ,which can be earned from ordering from our webssite.The rewards that can we earned from the spin the wheel game includes discounts that could be used when checking out after ordering.
 
 
 ## **Technology Used**
